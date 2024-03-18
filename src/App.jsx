@@ -10,13 +10,13 @@ const App = () => {
 
   const handlePrevious = () => {
     if (step > 1) {
-      setStep(prevState => prevState - 1)
+      setStep((prevState) => prevState - 1)
     }
   }
 
   const handleNext = () => {
     if (step < 3) {
-      setStep(prevState => prevState + 1)
+      setStep((prevState) => prevState + 1)
     }
 
     // BAD PRACTICE FOR CHANGING STATE
@@ -25,7 +25,7 @@ const App = () => {
 
   return (
     <>
-      <button className="close" onClick={() => setIsOpen(prevState => !prevState)}>&times;</button>
+      <button className="close" onClick={() => setIsOpen((prevState) => !prevState)}>&times;</button>
       {isOpen && (
         < div className="steps" >
           <div className='numbers'>
