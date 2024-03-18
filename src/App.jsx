@@ -5,6 +5,8 @@ import Msg from "./data/messages"
 const App = () => {
   const [step, setStep] = useState(1);
 
+  // const [test, setTest] = useState({ name: "Jeff" });
+
   const handlePrevious = () => {
     if (step > 1) {
       setStep(prevState => prevState - 1)
@@ -15,6 +17,9 @@ const App = () => {
     if (step < 3) {
       setStep(prevState => prevState + 1)
     }
+
+    // BAD PRACTICE FOR CHANGING STATE
+    // test.name = "Danielle" -> use this instead setTest({ name: "Danielle" });
   }
 
   return (
